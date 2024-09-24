@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="resumeForm">
+        <center>
+            <h1>Resume Form</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" maxlength="20" required> <br>
+            <button type="button" class="edit-btn" onclick="editField('name')">Edit</button>
+            <button type="button" class="delete-btn" onclick="deleteField('name')">Delete</button>
+            <label for="cnic">CNIC</label>
+            <input type="text" id="cnic" maxlength="13" required>
+            <br>
+            <button type="button" class="edit-btn" onclick="editField('cnic')">Edit</button>
+            <button type="button" class="delete-btn" onclick="deleteField('cnic')">Delete</button>
+
+            <label for="dob">Date</label>
+            <input type="date" id="dob" required><br>
+            <button type="button" class="edit-btn" onclick="editField('dob')">Edit</button>
+            <button type="button" class="delete-btn" onclick="deleteField('dob')">Delete</button>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" maxlength="30" required><br>
+            <button type="button" class="edit-btn" onclick="editField('email')">Edit</button>
+            <button type="button" class="delete-btn" onclick="deleteField('email')">Delete</button>
+
+            <label for="education">Education</label>
+            <textarea id="education" placeholder="Last or current degree" required></textarea><br>
+            <button type="button" class="edit-btn" onclick="editField('education')">Edit</button>
+            <button type="button" class="delete-btn" onclick="deleteField('education')">Delete</button>
+
+            <label for="experience">Work Experience</label>
+            <textarea id="experience" placeholder="Your experience" required></textarea><br>
+            <button type="button" class="edit-btn" onclick="editField('experience')">Edit</button>
+            <button type="button" class="delete-btn" onclick="deleteField('experience')">Delete</button>
+
+            <label for="skills">Skills</label>
+            <textarea id="skills" placeholder="Skills" required></textarea><br>
+            <button type="button" class="edit-btn" onclick="editField('skills')">Edit</button>
+            <button type="button" class="delete-btn" onclick="deleteField('skills')">Delete</button>
+
+            <br>
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+            <button type="button" onclick="saveResume()">Save Resume</button>
+            <button type="button" onclick="clearFormFields()">Clear All</button>
+
+        </center>
+    </form>
+    <div id="resumePreview" class="resume-preview"></div>
+     <script src="script.js"></script>
+</body>
+</html>
